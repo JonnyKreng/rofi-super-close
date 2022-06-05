@@ -115,7 +115,7 @@ START_TEST(test_mode_destroy) {
 }
 END_TEST
 
-/*
+
 START_TEST(test_mode_num_items) {
   unsigned int rows = mode_get_num_entries(&help_keys_mode);
   ck_assert_int_eq(rows, 76);
@@ -131,7 +131,7 @@ START_TEST(test_mode_num_items) {
   mode_destroy(&help_keys_mode);
 }
 END_TEST
-*/
+
 
 START_TEST(test_mode_result) {
   char *res;
@@ -185,7 +185,7 @@ static Suite *mode_suite(void) {
   tc_core = tcase_create("HelpKeys");
   tcase_add_checked_fixture(tc_core, test_mode_setup, test_mode_teardown);
   tcase_add_test(tc_core, test_mode_create);
-  tcase_add_test(tc_core, test_mode_num_items);
+  //tcase_add_test(tc_core, test_mode_num_items);
   tcase_add_test(tc_core, test_mode_result);
   tcase_add_test(tc_core, test_mode_destroy);
   tcase_add_test(tc_core, test_mode_match_entry);
